@@ -74,11 +74,11 @@ constrValidity <- function(x,
   ####### BEGIN PCA AND BIPLOTS VIA principal() 
   ########################
 
-      # preparing the result object for plotting by declaring the number of 
-    # components as extracted via non graphic solution of the scree test
-    # nFact default is 2 for the sake of having a biplot
-    res.pca <- X %>% psych::principal(nfactors = 2, rotate = rotation, cor = cor) 
-    plot2<-biplot.psych(res.pca,
+    # preparing the result object for plotting by declaring the number of 
+    res.pca <- X %>% psych::principal(nfactors = nFact, rotate = rotation, cor = cor) 
+  # nFact default is 2 for the sake of having a biplot
+    res.plot.pca <- X %>% psych::principal(nfactors = 2, rotate = rotation, cor = cor) 
+    plot2<-biplot.psych(res.plot.pca,
                  #scale = 0, # ensures that arrows are scaled to represent the loadings
                  main = paste(scale,": PCA - Biplot"),
                  sub=paste("Note that the optiman number of dimension identified via parallel analysis was: ", numComp),
