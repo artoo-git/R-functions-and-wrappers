@@ -9,3 +9,9 @@ This repo includes some Wrappers I wrote in R for my own use.
    - plots the data on the first two components of a scale 
    - prints the factor loading
    - prints the variance explained by each component
+1. reliability() : The function rely on boot and operationalise different aspects of the investigation of reliability for a given scale:
+   - executes inter-item (Person) correlations
+   - Plots inter-item correlations around the estimated mean interitem correlation
+   - estimates Chrombach's alpha
+   - estimates (via bootstrap) a 95% conf.int. for the mean interitem cor
+   - estimates (via bootstrap) a 95% conf.int. for Chrombach's alpha
